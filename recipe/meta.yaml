@@ -17,7 +17,7 @@ source:
 build:
   # libXxf86dga currently has complex POSIX-only dependencies such as fork() or waitpid(), as well as mmap()
   skip: true  # [win]
-  number: 0
+  number: 1
   detect_binary_files_with_prefix: true
   run_exports:
     - {{ pin_subpackage(name|lower) }}
