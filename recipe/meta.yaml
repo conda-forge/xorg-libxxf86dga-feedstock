@@ -1,8 +1,8 @@
 {% set xorg_name = "libXxf86dga" %}
 {% set xorg_category = "lib" %}
 {% set name = "xorg-" ~ xorg_name %}
-{% set version = "1.1.6" %}
-{% set sha256 = "87c7482b1e29b4eeb415815641c4f69c00545a8138e1b73ff1f361f7d9c22ac4" %}
+{% set version = "1.1.7" %}
+{% set sha256 = "fd76cc930b85394fc12e52a01b3fb33b626731ac0084b3576b1e0095156683f7" %}
 {% set am_version = "1.16" %} # keep synchronized with build.sh
 
 package:
@@ -17,7 +17,7 @@ source:
 build:
   # libXxf86dga currently has complex POSIX-only dependencies such as fork() or waitpid(), as well as mmap()
   skip: true  # [win]
-  number: 1
+  number: 0
   run_exports:
     - {{ pin_subpackage(name|lower) }}
 
